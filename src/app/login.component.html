@@ -1,0 +1,29 @@
+
+<!--<h2>{{ heading }}</h2>
+
+<p style="background-color: red" *ngIf="status == false">
+	Login Failed
+</p>
+
+<p style="background-color: green" *ngIf="status == true">
+	Login Successful
+</p>
+
+<div>
+	<form>
+		Username: <input type="text"><br/>
+		Passowrd: <input type="Passowrd" name=""><br>
+		<button type="button" (click)="doLogin()">Login</button>
+	</form>
+</div>-->
+
+<div *ngIf="flag">
+	<h2>List of Products</h2>
+
+	<ul *ngFor="let product of products">
+		<li>{{ product.name }} - {{ product.price | currency }} - {{product.orderDate | date: 'MM/dd/yyyy'}}</li>
+	</ul>
+
+</div>
+
+<button (click)="toggle()">Toggle</button>
